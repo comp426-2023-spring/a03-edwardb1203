@@ -42,8 +42,8 @@
     },
     {
       "name": "Play Rock Paper Scissors with an opponent",
-      "setup": "",
-      "run": "SHOT=$(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "setup": "SHELL=/bin/bash;",
+      "run": "SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
