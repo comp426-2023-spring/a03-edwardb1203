@@ -13,7 +13,7 @@
     {
       "name": "Node Version",
       "setup": "",
-      "run": "node -v; SHELL=/bin/bash;",
+      "run": "node -v",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -43,7 +43,7 @@
     {
       "name": "Play Rock Paper Scissors with an opponent",
       "setup": "",
-      "run": "SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "run": "SHELL=/bin/bash; SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
@@ -53,7 +53,7 @@
     {
       "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
       "setup": "",
-      "run": "SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "run": "SHELL=/bin/bash; SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
       "input": "",
       "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
       "comparison": "regex",
@@ -63,7 +63,7 @@
     {
       "name": "RPS Help",
       "setup": "",
-      "run": "HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rps $HELP",
+      "run": "SHELL=/bin/bash; HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rps $HELP",
       "input": "",
       "output": "display this help message and exit",
       "comparison": "included",
@@ -73,7 +73,7 @@
     {
       "name": "RPSLS Help",
       "setup": "",
-      "run": "HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rpsls $HELP",
+      "run": "SHELL=/bin/bash; HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rpsls $HELP",
       "input": "",
       "output": "display this help message and exit",
       "comparison": "included",
@@ -83,7 +83,7 @@
     {
       "name": "RPS Rules",
       "setup": "",
-      "run": "RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
+      "run": "SHELL=/bin/bash; RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
       "input": "",
       "output": "Paper COVERS Rock",
       "comparison": "included",
@@ -93,7 +93,7 @@
     {
       "name": "RPSLS Rules",
       "setup": "",
-      "run": "RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
+      "run": "SHELL=/bin/bash; RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
       "input": "",
       "output": "Spock SMASHES Scissors",
       "comparison": "included",
@@ -103,7 +103,7 @@
     {
       "name": "RPS out of range",
       "setup": "",
-      "run": "SHOT=(\"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "run": "SHELL=/bin/bash; SHOT=(\"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
       "input": "",
       "output": "Rules for Rock Paper Scissors:",
       "comparison": "included",
@@ -113,7 +113,7 @@
     {
       "name": "RPSLS out of range",
       "setup": "",
-      "run": "SHOT=(\"Data\" \"leaf\" \"hammer\" \"pencil\" \"mouse\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "run": "SHELL=/bin/bash; SHOT=(\"Data\" \"leaf\" \"hammer\" \"pencil\" \"mouse\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
       "input": "",
       "output": "Rules for the Lizard-Spock Expansion of Rock Paper Scissors:",
       "comparison": "included",
