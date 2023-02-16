@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "Link command works",
+      "setup": "npm install",
+      "run": "npm link",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "Node Version",
+      "setup": "",
+      "run": "node -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Play Rock Paper Scissors without opponent",
+      "setup": "",
+      "run": "node-rps",
+      "input": "",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors\")}",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "Play Rock Paper Scissors Lizard Spock without an opponent",
+      "setup": "",
+      "run": "node-rpsls",
+      "input": "",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\"}",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "Play Rock Paper Scissors with an opponent",
+      "setup": "npm link",
+      "run": "SHOT=(\"rock\" \"paper\" \"scissors\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "input": "",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "Play Rock Paper Scissors Lizard Spock with an opponent",
+      "setup": "",
+      "run": "SHOT=(\"rock\" \"paper\" \"scissors\" \"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "input": "",
+      "output": "{\"player\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"opponent\":\"([R|r]ock|[P|p]aper|[S|s]cissors|[L|l]izard|[S|s]pock)\",\"result\":\"([T|t]ie|[L|l]ose|[W|w]in)\"}",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "RPS Help",
+      "setup": "",
+      "run": "HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rps $HELP",
+      "input": "",
+      "output": "display this help message and exit",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "RPSLS Help",
+      "setup": "",
+      "run": "HELP=(\"-h\" \"--help\"); echo ${HELP[$RANDOM % ${#HELP[@]} ]}; node-rpsls $HELP",
+      "input": "",
+      "output": "display this help message and exit",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "RPS Rules",
+      "setup": "",
+      "run": "RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
+      "input": "",
+      "output": "Paper COVERS Rock",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "RPSLS Rules",
+      "setup": "",
+      "run": "RULES=(\"-r\" \"--rules\"); echo ${RULES[$RANDOM % ${#RULES[@]} ]}; node-rps $RULES",
+      "input": "",
+      "output": "Spock SMASHES Scissors",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5000
+    },
+    {
+      "name": "RPS out of range",
+      "setup": "",
+      "run": "SHOT=(\"lizard\" \"spock\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rps $SHOT",
+      "input": "",
+      "output": "Rules for Rock Paper Scissors:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2500
+    },
+    {
+      "name": "RPSLS out of range",
+      "setup": "",
+      "run": "SHOT=(\"Data\" \"leaf\" \"hammer\" \"pencil\" \"mouse\"); echo ${SHOT[$RANDOM % ${#SHOT[@]} ]}; node-rpsls $SHOT",
+      "input": "",
+      "output": "Rules for the Lizard-Spock Expansion of Rock Paper Scissors:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2500
+    }
+  ]
+}
