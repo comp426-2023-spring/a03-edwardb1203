@@ -92,7 +92,7 @@
     },
     {
       "name": "RPSLS Rules",
-      "setup": "echo 'RULES=(\"-r\" \"--rules\") && echo ${RULES[$RANDOM % ${#RULES[@]} ]} && node-rps $RULES' > temp.sh",
+      "setup": "echo 'RULES=(\"-r\" \"--rules\") && echo ${RULES[$RANDOM % ${#RULES[@]} ]} && node-rpsls $RULES' > temp.sh",
       "run": "bash temp.sh; rm temp.sh",
       "input": "",
       "output": "Spock SMASHES Scissors",
