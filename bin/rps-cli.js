@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// import { rps } from "/lib/rpsls.js"
+import { rps } from '../lib/rpsls.js';
 import minimist from "minimist";
 
 // Need this to store cli args
@@ -16,3 +16,5 @@ if (args.r || args.rules) {
     console.log('Rules for Rock Paper Scissors:\n\n  - Scissors CUTS Paper \n  - Paper COVERS Rock\n  - Rock CRUSHES Scissors');
     process.exit(0);
 }
+
+console.log(rps(args._[0]));
