@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { rpsls } from "/lib/rpsls.js"
+import { rpsls } from '../lib/rpsls.js';
 import minimist from "minimist";
 
 // Need this to store cli args
